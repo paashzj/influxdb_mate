@@ -1,4 +1,4 @@
-module influxdb_mate_go
+module influxdb_mate
 
 go 1.16
 
