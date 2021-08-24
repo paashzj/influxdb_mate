@@ -1,10 +1,18 @@
 package influx
 
 import (
-	"influxdb_mate_go/pkg/path"
-	"influxdb_mate_go/pkg/util"
+	"influxdb_mate/pkg/path"
+	"influxdb_mate/pkg/util"
+	"time"
 )
 
 func Start() error {
-	return util.CallScript(path.InfluxStartScript)
+	err := util.CallScript(path.InfluxStartScript)
+	if err != nil {
+		return err
+	}
+	time.Sleep(10 * time.Second)
+	err = util.CallScript(path.InfluxSetupScript)
+	InitClient()
+	return err
 }
