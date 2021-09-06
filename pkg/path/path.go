@@ -12,8 +12,9 @@ var (
 
 // mate
 var (
-	InfluxMatePath    = filepath.FromSlash(InfluxHome + "/mate")
-	InfluxScripts     = filepath.FromSlash(InfluxMatePath + "/scripts")
-	InfluxStartScript = filepath.FromSlash(InfluxScripts + "/start-influx.sh")
-	InfluxSetupScript = filepath.FromSlash(InfluxScripts + "/setup-influx.sh")
+	InfluxMatePath                 = filepath.FromSlash(InfluxHome + "/mate")
+	InfluxScripts                  = filepath.FromSlash(InfluxMatePath + "/scripts")
+	InfluxStartScript              = filepath.FromSlash(InfluxScripts + "/start-influx.sh")
+	InfluxSetupScript              = filepath.FromSlash(InfluxScripts + "/setup-influx.sh")
+	InfluxSetupTelegrafTokenScript = filepath.FromSlash(InfluxScripts + "/setup-telegraf.sh")
 )

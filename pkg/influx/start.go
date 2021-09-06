@@ -13,6 +13,13 @@ func Start() error {
 	}
 	time.Sleep(10 * time.Second)
 	err = util.CallScript(path.InfluxSetupScript)
+	if err != nil {
+		return err
+	}
+	err = util.CallScript(path.InfluxSetupTelegrafTokenScript)
+	if err != nil {
+		return err
+	}
 	InitClient()
 	return err
 }
