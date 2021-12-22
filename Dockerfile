@@ -14,4 +14,4 @@ COPY --from=build /opt/sh/compile/pkg/influxdb_mate /opt/sh/influxdb/mate/influx
 
 WORKDIR /opt/sh/influxdb
 
-CMD ["/usr/local/bin/dumb-init", "bash", "-vx", "/opt/sh/influxdb/mate/scripts/start.sh"]
+CMD ["/usr/bin/dumb-init", "bash", "-vx", "/opt/sh/influxdb/mate/scripts/start.sh"]
