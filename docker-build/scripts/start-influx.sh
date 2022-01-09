@@ -1,3 +1,5 @@
 #!/bin/bash
 
-nohup influxd run >$INFLUX_HOME/influx.log 2>$INFLUX_HOME/influx_error.log &
+mkdir $INFLUX_HOME/logs
+nohup influxd run >>$INFLUX_HOME/logs/influx.stdout.log 2>>$INFLUX_HOME/logs/influx.stderr.log &
+
